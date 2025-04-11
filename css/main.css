@@ -1,0 +1,67 @@
+/*fonts & weight*/
+/*font sizes*/
+/*colors*/
+html {
+  background-color: hsl(228, 43%, 16%);
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: hsl(0, 0%, 96%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  margin: 1.5rem;
+}
+
+footer {
+  width: 100vw;
+  position: relative;
+  margin-left: calc(-50vw + 50%);
+}
+
+.purple {
+  color: hsl(241.8, 82%, 76%);
+}
+
+.bg-blue {
+  background-color: hsl(230.909, 54%, 12%);
+}
+
+.bg-light-blue {
+  background-color: hsl(203, 30%, 39%);
+}
+
+.secondary-font {
+  font-family: "Yeseva One", serif;
+}
+
+.my-img {
+  width: 300px;
+  height: 300px;
+  background: url("../../img/purple.svg") no-repeat center/contain;
+  transition: background 0.3s ease-in-out;
+}
+.my-img:hover {
+  background: url("../../img/color.svg") no-repeat center/contain;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-nav {
+  color: hsl(0, 0%, 96%);
+}
+.btn-nav:hover {
+  color: hsl(241.8, 82%, 76%);
+}
+
+.btn-purple {
+  background-color: hsl(242, 27%, 49%);
+  border-radius: 0.5rem;
+}
