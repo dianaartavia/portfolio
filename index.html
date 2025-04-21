@@ -151,13 +151,13 @@
         <div class="pb-20">
             <h2 class="pt-24 text-5xl secondary-font text-center">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8 pt-8 place-items-center">
-                <div class="relative group w-full max-w-3xl h-80 overflow-hidden rounded-xl shadow-lg">
+                <div class="relative group w-full max-w-3xl h-80 overflow-hidden rounded-xl shadow-lg card-clickable">
                     <div class="w-full h-full flex items-center justify-center bg-blue">
                         <img src="/img/network.png" alt="Network"
                             class="max-w-[250px] h-auto transition-transform duration-300 group-hover:scale-105">
                     </div>
                     <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col justify-center items-center px-6 
-                                opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center">
+                opacity-0 transition-opacity duration-500 text-center info-content pointer-events-none">
                         <p class="text-base font-normal pb-3">
                             Website to connect small businesses with customers. I developed the backend and the
                             database.
@@ -179,15 +179,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="relative group w-full max-w-3xl h-80 overflow-hidden rounded-xl shadow-lg bg-blue">
+
+                <div class="relative group w-full max-w-3xl h-80 overflow-hidden rounded-xl shadow-lg bg-blue card-clickable">
                     <div
                         class="flex items-center justify-center w-full h-full transition-transform duration-300 group-hover:scale-105">
                         <h2 class="text-center font-bold text-6xl purple leading-tight">
                             Hotel<br>Beach
                         </h2>
                     </div>
-                    <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col justify-center items-center px-4 
-                                opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center">
+                    <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col justify-center items-center px-6 
+                                opacity-0 transition-opacity duration-500 text-center info-content pointer-events-none">
                         <p class="text-base font-normal pb-3">
                             Website for a Hotel, uses API’s to access customer information to facilitate the
                             registration data to the site or reservation of one of the packages.
@@ -211,16 +212,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="relative group w-full max-w-3xl h-80 overflow-hidden rounded-xl shadow-lg">
+                <div class="relative group w-full max-w-3xl h-80 overflow-hidden rounded-xl shadow-lg card-clickable">
                     <div class="w-full h-full flex items-center justify-center bg-blue">
                         <img src="/img/cookly.png" alt="Cookly"
                             class="max-w-[250px] h-auto transition-transform duration-300 group-hover:scale-105">
                     </div>
                     <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col justify-center items-center px-6 
-                                opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center">
+                                opacity-0 transition-opacity duration-500 text-center info-content pointer-events-none">
                         <p class="text-base font-normal pb-3">
                             Recipe website with an administrator and an end-user sections. It features CRUD, displays by
-                            category, filters and searches. I was full-stack developer.
+                            category,
+                            filters and searches. I was full-stack developer.
                         </p>
                         <ul class="flex flex-wrap justify-center gap-2 text-sm font-normal text-white mb-4">
                             <li class="bg-light-blue px-2 py-1 rounded-lg">HTML</li>
@@ -238,16 +240,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="relative group w-full max-w-3xl h-80 overflow-hidden rounded-xl shadow-lg">
+                <div class="relative group w-full max-w-3xl h-80 overflow-hidden rounded-xl shadow-lg card-clickable">
                     <div class="w-full h-full flex items-center justify-center bg-blue">
                         <img src="/img/veggietaste.png" alt="Veggie Taste"
                             class="max-w-[250px] h-auto transition-transform duration-300 group-hover:scale-105">
                     </div>
                     <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col justify-center items-center px-6 
-                                opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center">
+                                opacity-0 transition-opacity duration-500 text-center info-content pointer-events-none">
                         <p class="text-base font-normal pb-3">
                             Recipe website with an administrator and an end-user sections. It features CRUD, displays by
-                            category, filters and searches. I was full-stack developer.
+                            category,
+                            filters and searches. I was full-stack developer.
                         </p>
                         <ul class="flex flex-wrap justify-center gap-2 text-sm font-normal text-white mb-4">
                             <li class="bg-light-blue font-normal px-2 py-1 rounded-lg">HTML</li>
@@ -296,6 +299,7 @@
 
     <script src="js/navbar.js"></script>
     <script src="js/skills.js"></script>
+    <script src="js/card.js"></script>
 
 </body>
 
