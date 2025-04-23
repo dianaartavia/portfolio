@@ -12,7 +12,7 @@ function setupClickEvents() {
                 info.classList.add('opacity-100');
             }
 
-            e.stopPropagation();
+            //e.stopPropagation();
         });
     });
 
