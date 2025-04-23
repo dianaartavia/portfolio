@@ -5,14 +5,20 @@ function setupClickEvents() {
             const isVisible = info.classList.contains('opacity-100');
 
             // Cierra todos los overlays
-            document.querySelectorAll('.info-content').forEach(i => i.classList.remove('opacity-100'));
+            document.querySelectorAll('.info-content').forEach(i => {
+                i.classList.remove('opacity-100');
+                i.classList.remove('pointer-events-auto');
+                i.classList.add('pointer-events-none');
+            });
 
             // Si no estaba visible, se abre
             if (!isVisible) {
                 info.classList.add('opacity-100');
+                info.classList.remove('pointer-events-none');
+                info.classList.add('pointer-events-auto');
             }
 
-            //e.stopPropagation();
+            e.stopPropagation();
         });
     });
 
