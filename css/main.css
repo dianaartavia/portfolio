@@ -1,17 +1,24 @@
 /*fonts & weight*/
 /*font sizes*/
 /*colors*/
+/*===============
+    Base Styles 
+=================*/
 html {
-  background-color: hsl(228, 43%, 16%);
   font-size: 0.8rem;
-  font-weight: 300;
   color: hsl(0, 0%, 96%);
 }
 
 body {
+  background-color: hsl(228, 43%, 16%);
   font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/*=====================
+    Layout components 
+=======================*/
 main {
   margin: 1.5rem;
 }
@@ -22,36 +29,60 @@ footer {
   margin-left: calc(-50vw + 50%);
 }
 
-.purple {
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*=====================
+    Theme Modifiers 
+=======================*/
+body.light-mode {
+  background-color: hsl(244, 94%, 93%);
+  color: hsl(242, 27%, 49%);
+}
+body.light-mode .bg-blue {
+  background-color: hsl(241.8, 82%, 76%);
+}
+body.light-mode .bg-light-blue {
+  background-color: hsl(203, 30%, 59%);
+}
+body.light-mode .bg-white {
+  background-color: hsl(242, 27%, 49%);
+}
+body.light-mode .purple {
   color: hsl(241.8, 82%, 76%);
 }
-
-.bg-blue {
-  background-color: hsl(230.909, 54%, 12%);
+body.light-mode .txt-white {
+  color: hsl(242, 27%, 49%);
+}
+body.light-mode .bg-card {
+  background-color: hsl(242, 97%, 88%);
+}
+body.light-mode .btn-nav {
+  color: hsl(244, 94%, 93%);
+}
+body.light-mode .btn-nav:hover {
+  color: hsl(242, 28%, 42%);
+}
+body.light-mode .info-content {
+  background-color: rgba(184.314, 191.8249842, 233.886, 0.9);
+  color: hsl(230.909, 54%, 12%);
 }
 
-.bg-light-blue {
-  background-color: hsl(203, 30%, 39%);
-}
-
-.secondary-font {
-  font-family: "Yeseva One", serif;
-}
-
+/*=====================
+    UI Components
+=======================*/
 .my-img {
   width: 300px;
   height: 300px;
   background: url("../../img/purple.svg") no-repeat center/contain;
   transition: background 0.3s ease-in-out;
+  cursor: pointer;
 }
-.my-img:hover {
+.my-img.active {
   background: url("../../img/color.svg") no-repeat center/contain;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .btn-nav {
@@ -60,8 +91,49 @@ footer {
 .btn-nav:hover {
   color: hsl(241.8, 82%, 76%);
 }
-
 .btn-purple {
   background-color: hsl(242, 27%, 49%);
   border-radius: 0.5rem;
+  color: hsl(0, 0%, 96%);
+}
+
+.info-content {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+.info-content.opacity-100 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*=====================
+    Utility Classess
+=======================*/
+.purple {
+  color: hsl(241.8, 82%, 76%);
+}
+
+.txt-white {
+  color: hsl(0, 0%, 96%);
+}
+
+.bg-blue {
+  background-color: hsl(230.909, 54%, 12%);
+}
+
+.bg-white {
+  background-color: hsl(0, 0%, 96%);
+}
+
+.bg-light-blue {
+  background-color: hsl(203, 30%, 39%);
+}
+
+.bg-card {
+  background-color: hsl(230.909, 54%, 12%);
+}
+
+.secondary-font {
+  font-family: "Yeseva One", serif;
 }
