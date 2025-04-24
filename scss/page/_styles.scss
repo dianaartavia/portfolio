@@ -91,6 +91,7 @@ body.light-mode {
 
     &.active {
         background: url("../../img/color.svg") no-repeat center/contain;
+        transform: scale(1); 
     }
 }
 
