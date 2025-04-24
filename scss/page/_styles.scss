@@ -1,67 +1,153 @@
 @use "../utils/variables" as *;
 
+/*===============
+    Base Styles 
+=================*/
 html {
-    background-color: $clr-blue;
     font-size: 0.8rem;
-    font-weight: $fw-light;
     color: $clr-white;
-    
 }
 
 body {
+    background-color: $clr-blue;
     font-family: $ff-primary;
+    font-weight: $fw-light;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-main{
+
+/*=====================
+    Layout components 
+=======================*/
+main {
     margin: 1.5rem;
 }
 
-footer{
+footer {
     width: 100vw;
     position: relative;
     margin-left: calc(-50vw + 50%);
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*=====================
+    Theme Modifiers 
+=======================*/
+body.light-mode {
+    background-color: $clr-light-purple;
+    color: $clr-dark-purple;
+
+    .bg-blue {
+        background-color: $clr-purple;
+    }
+
+    .bg-light-blue {
+        background-color: lighten($clr-light-blue, 20%);
+    }
+
+    .bg-white{
+        background-color: $clr-dark-purple;
+    }
+
+    .purple {
+        color: $clr-purple;
+    }
+
+    .txt-white{
+        color: $clr-dark-purple;
+    }
+
+    .bg-card {
+        background-color: $clr-white-100;
+    }
+
+    .btn-nav {
+        color: $clr-light-purple;
+
+        &:hover {
+            color: $clr-dark-purple-100
+        }
+    }
+
+    .info-content {
+        background-color: rgba(lighten($clr-dark-blue, 70%), 0.9);
+        color: $clr-dark-blue;
+    }
+}
+
+/*=====================
+    UI Components
+=======================*/
+.my-img {
+    width: 300px;
+    height: 300px;
+    background: url("../../img/purple.svg") no-repeat center/contain;
+    transition: background 0.3s ease-in-out;
+    cursor: pointer;
+
+    &.active {
+        background: url("../../img/color.svg") no-repeat center/contain;
+    }
+}
+
+.btn {
+    &-nav {
+        color: $clr-white;
+
+        &:hover {
+            color: $clr-purple;
+        }
+    }
+
+    &-purple {
+        background-color: $clr-dark-purple;
+        border-radius: 0.5rem;
+        color: $clr-white;
+    }
+}
+
+.info-content {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+
+    &.opacity-100 {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+/*=====================
+    Utility Classess
+=======================*/
 .purple {
     color: $clr-purple;
+}
+
+.txt-white{
+    color: $clr-white;
 }
 
 .bg-blue {
     background-color: $clr-dark-blue;
 }
 
-.bg-light-blue{
+.bg-white{
+    background-color: $clr-white;
+}
+
+.bg-light-blue {
     background-color: $clr-light-blue;
+}
+
+.bg-card {
+    background-color: $clr-dark-blue;
 }
 
 .secondary-font {
     font-family: $ff-secondary;
-}
-
-.my-img{
-    width: 300px;
-    height: 300px;
-    background: url("../../img/purple.svg") no-repeat center/contain;
-    transition: background 0.3s ease-in-out;
-    
-    &:hover {
-        background: url("../../img/color.svg") no-repeat center/contain;
-    }
-}
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn-nav{
-    color: $clr-white;
-
-    &:hover{
-        color: $clr-purple;
-    }
-}
-
-.btn-purple {
-    background-color: $clr-dark-purple;
-    border-radius: 0.5rem;
 }
